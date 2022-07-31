@@ -1,6 +1,7 @@
 package com.vishal.jdbc.dao;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Repository;
@@ -11,8 +12,8 @@ import com.vishal.jdbc.entity.Employee;
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-	
-	JdbcTemplate jdbcTemplate=new JdbcTemplate(getDatasource());
+	@Autowired
+	JdbcTemplate jdbcTemplate;//=new JdbcTemplate(getDatasource());
 	
 	
 	@Override
@@ -26,7 +27,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		return i;
 	}
 	
-	
+	/*
 	private DataSource getDatasource() {
 		DataSource dataSource;
 		
@@ -34,6 +35,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		
 		return dataSource;
 	}
-	
+	*/
 
 }

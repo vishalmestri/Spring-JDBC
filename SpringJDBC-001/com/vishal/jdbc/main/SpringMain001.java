@@ -14,8 +14,8 @@ public class SpringMain001 {
 		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("beans.xml");
 		
 		Employee e= new Employee();
-		e.setId(3);
-		e.setName("Vishal-"+e.getId());
+		e.setId(4);
+		e.setName("fVishal-"+e.getId());
 		e.setGender(0);
 		EmployeeDAO employeeDAO=(EmployeeDAO) applicationContext.getBean("EmployeeDAO");
 		int i=employeeDAO.insert(e);
